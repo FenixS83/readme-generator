@@ -7,7 +7,7 @@ function renderLicenseBadge(license) {
       licenseIcon = "![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
       break;
     case "MIT":
-      licenseIcon = "![MIT License](https://img.shields.io/badge/l/atomic-design-ui.svg?)";
+      licenseIcon = "![MIT License](https://img.shields.io/badge/license-MIT-blue)";
       break;
     case "GPLv3 License":
       licenseIcon= "![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)";
@@ -28,13 +28,13 @@ function renderLicenseLink(license) {
       licenseURL=`[Apache 2.0 License](https://opensource.org/licenses/Apache-2.0)`;
       break;
     case "MIT":
-      licenseURL=``;
+      licenseURL=`[MIT License](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)`;
       break;
     case "GPLv3":
-      licenseURL=``;
+      licenseURL=`[GPLv3 License](https://opensource.org/licenses/)`;
       break;
     case"Unlicense":
-      licenseURL=``;
+      licenseURL=`[$(license)](http://unlicense.org/)`;
       break;
   }
   return licenseURL;
@@ -49,51 +49,84 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
   ${renderLicenseBadge(data.license)}
+
   ${renderLicenseSection(data.license)}
 
   ## Description
+
   ${data.description}
   
   Click the link below to visit my deployed page.
+
   <!-- [URL](${data.site}) -->
+
   ## Table of Contents
   
   * [Goals](#goals)
+
   * [Usage](#usage) 
+
   * [Installation](#installation)  
+
   * [Test](#test)
+
   * [Problems](#problems)
+
   * [Visualization](#visualization)
+
   * [Acknowledgements](#acknowledgements)
+
   * [Contributions](#contributions)
+
   * [Resources](#resources)
+
   * [License](#license) 
+
   * [Contact](#contact) 
+
   
   ## Goals
+
   ${data.goals}
+
   ## Usage
+
   ${data.usage}
+
   ## Installation
   
   ${data.install}  
+
   ## Test
+
   ${data.test}
+
   ## Problems
+
   ${data.problems}
+
   ## Visualization
+
   placeholder to add images or other media
+
   ## Acknowledgements
+
   ${data.credits}
+
   ## Contributions
+
   ${data.contribution}
+
   ## Resources
  
   ${data.resources}
+
   ## Contact
   
   GitHub Username: ${data.github} [@${data.github}](https://github.com/${data.github})
+
   ${data.contact}
 
 
