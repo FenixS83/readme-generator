@@ -1,4 +1,6 @@
-# Lily's biscuits
+# lilys biscuits
+
+  
 
   
 
@@ -6,7 +8,7 @@
 
   ## Description
 
-  lily eats biscuits
+  lily likes biscuits
   
   Click the link below to visit my deployed page.
 
@@ -39,11 +41,11 @@
   
   ## Goals
 
-  to help lily get more biscuits
+  to help lily find biscuits
 
   ## Usage
 
-  to bring all the biscuits to lily
+  to bring lily biscuits
 
   ## Installation
   
@@ -75,7 +77,7 @@
 
   ## Contact
   
-  GitHub Username: fenisS83 [@fenisS83](https://github.com/fenisS83)
+  GitHub Username: fenixs83 [@fenixs83](https://github.com/fenixs83)
 
   fenix.sampson@gmail.com
 

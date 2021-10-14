@@ -4,16 +4,16 @@ function renderLicenseBadge(license) {
   let licenseIcon = "";
   switch (license) {
     case "Apache":
-      licenseIcon = "![Apache 2.0 License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)";
+      licenseIcon = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
       break;
     case "MIT":
-      licenseIcon = "![MIT License](https://img.shields.io/badge/license-MIT-blue)";
+      licenseIcon = "![GitHub:MIT](https://img.shields.io/github/license/FenixS83/readme-generator?style=flat-square)";
       break;
     case "GPLv3 License":
       licenseIcon= "![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)";
       break;
     case "Unlicense":
-      licenseIcon="![Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)";
+      licenseIcon="![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
       break;
   }
   return licenseIcon;
@@ -49,6 +49,8 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
+  ${renderLicenseLink(data.license)}
 
   ${renderLicenseBadge(data.license)}
 
