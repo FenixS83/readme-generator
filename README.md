@@ -1,5 +1,5 @@
 # README Generator
-
+![GitHub:MIT](https://img.shields.io/github/license/FenixS83/readme-generator?style=flat-square)
 
   ## Description
 
