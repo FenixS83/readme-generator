@@ -62,8 +62,8 @@ const questions = [
     //Project Technologies
 {
     type: `input`,
-    name: `tech`,
-    message: `What technologies does your project use?`,
+    name: `resources`,
+    message: `What resources does your project use?`,
 },
     //Problems faced
 {
@@ -75,7 +75,7 @@ const questions = [
     //Project test commands
 {
     type: `input`,
-    name: `tests`,
+    name: `test`,
     message: `What commands should be run to test your project?`,
     default: `npm run test`,
 },
@@ -90,7 +90,7 @@ const questions = [
     //Project contributions
 {
     type: `input`,
-    name: `contribute`,
+    name: `contribution`,
     message: `How does someone contribute to this project?`,
 },
 
@@ -119,7 +119,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then(response => {
         console.log(response);
-        writeToFile(`sampleREADME.md`, generateMarkdown(response))
+        writeToFile(`exampleREADME.md`, generateMarkdown(response))
     });
 }
 

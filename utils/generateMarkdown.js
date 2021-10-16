@@ -1,7 +1,24 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  let licenseIcon = "";
+  if ((license) === "Apache") {
+    return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
+  }
+
+  if ((license)==="MIT") {
+    return "![GitHub:MIT](https://img.shields.io/github/license/FenixS83/readme-generator?style=flat-square)";
+  }
+
+  if ((license)==="GPLv3") {
+    return "![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)"
+  }
+
+  if ((license)==="Unlicense") {
+    return "![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)";
+  }
+
+
+  var licenseIcon = "";
   switch (license) {
     case "Apache":
       licenseIcon = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)]";
@@ -28,7 +45,7 @@ function renderLicenseLink(license) {
       licenseURL=`[Apache 2.0 License](https://opensource.org/licenses/Apache-2.0)`;
       break;
     case "MIT":
-      licenseURL=`[MIT License](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)`;
+      licenseURL=`![GitHub](https://img.shields.io/github/license/FenixS83/readme-generator?style=flat-square)`;
       break;
     case "GPLv3":
       licenseURL=`[GPLv3 License](https://opensource.org/licenses/)`;
@@ -43,18 +60,15 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  return `This projet uses ${license}.`
+  return `This projet uses ${license}.`, renderLicenseBadge;
 }
+
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
-  ${renderLicenseLink(data.license)}
-
   ${renderLicenseBadge(data.license)}
-
-  ${renderLicenseSection(data.license)}
 
   ## Description
 
@@ -93,6 +107,10 @@ function generateMarkdown(data) {
 
   ${data.goals}
 
+  ## Motivation
+
+  ${data.motivation}
+
   ## Usage
 
   ${data.usage}
@@ -124,6 +142,16 @@ function generateMarkdown(data) {
   ## Resources
  
   ${data.resources}
+
+  ## License
+
+  ${renderLicenseSection(data.license)}
+
+  ${renderLicenseBadge(data.license)}
+
+  This projet uses ${data.license}. 
+  
+  The link to the License can be found here (${renderLicenseLink(data.license)})
 
   ## Contact
   
